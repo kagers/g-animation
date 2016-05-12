@@ -157,7 +157,7 @@ def run(filename):
     """
     This function runs an mdl script
     """
-    color = [255, 255, 0]
+    color = [255, 255, 255]
     tmp = new_matrix()
     ident( tmp )
 
@@ -187,6 +187,10 @@ def run(filename):
                 stack.pop()
             if not stack:
                 stack = [ tmp ]
+            if command[0] == "ambient":                
+                color[0] = command[1]
+                color[1] = command[2]
+                color[2] = command[3]
 
             if command[0] == "push":
                 stack.append( stack[-1][:] )

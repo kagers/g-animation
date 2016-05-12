@@ -1,5 +1,5 @@
-example: animtest.mdl lex.py main.py matrix.py mdl.py script.py yacc.py
-	python main.py animtest.mdl
+example: frog.mdl lex.py main.py matrix.py mdl.py script.py yacc.py
+	python main.py frog.mdl
 
 clean:
 	rm *pyc *out parsetab.py
